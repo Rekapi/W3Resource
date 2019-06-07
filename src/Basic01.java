@@ -1,7 +1,5 @@
 package Basic01;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 
@@ -58,7 +56,7 @@ public class Basic01 {
         int a = scan.nextInt();
         DecToBi(a);*/
     	
-    	// 22. converting from binary number to decimal number 
+    	/* 22. converting from binary number to decimal number 
     	int sum =0;
     	Scanner scan = new Scanner(System.in);
     	String binary = scan.nextLine();
@@ -72,8 +70,19 @@ public class Basic01 {
     		 int result = y * a[i];
     		 sum +=result;
     	}
-    	System.out.println(sum);
+    	System.out.println(sum);*/
     	
+    	// 33. compute the sum of the digits of an integer
+    	int sum =0;
+    	Scanner scan = new Scanner(System.in);
+    	String num = scan.nextLine();
+    	String[] arr_String = num.split("");
+    	Integer[] a = new Integer[arr_String.length];
+    	for(int i =0; i<a.length;i++) {
+    		a[i] = Integer.parseInt(arr_String[i]);
+    		sum += a[i];
+    	}
+    	System.out.println(sum);
     }
     // 11. method to calculate perimeter and area of a given circle
     // perimeter method
@@ -128,26 +137,4 @@ public class Basic01 {
     	}
     	System.out.println("The Result is : " + sum);
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
