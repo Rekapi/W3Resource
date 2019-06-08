@@ -1,11 +1,12 @@
 package Basic01;
 
+import java.io.Console;
 import java.util.Scanner;
 
 
 //import java.util.Scanner;
 public class Basic01 {
-    @SuppressWarnings("resource")
+	public static final Scanner scan = new Scanner(System.in);
 	public static void main(String[] args) {
         // 7. program that takes number as input and prints its multiplications table upto 10
         /*Scanner scan = new Scanner(System.in);
@@ -72,7 +73,7 @@ public class Basic01 {
     	}
     	System.out.println(sum);*/
     	
-    	// 33. compute the sum of the digits of an integer
+    	/* 33. compute the sum of the digits of an integer
     	int sum =0;
     	Scanner scan = new Scanner(System.in);
     	String num = scan.nextLine();
@@ -82,7 +83,68 @@ public class Basic01 {
     		a[i] = Integer.parseInt(arr_String[i]);
     		sum += a[i];
     	}
-    	System.out.println(sum);
+    	System.out.println(sum);*/
+    	
+    	// 37. reverse a String 
+    	/*String Phrase = scan.nextLine();
+    	char[] ConvertedString = Phrase.toCharArray();
+    	for(int i =ConvertedString.length -1; i>=0; i--) {
+    		char rev_Char = ConvertedString[i];
+    		System.out.print(rev_Char);
+    	}
+    	System.out.println("");*/
+    	
+    	// 38.count the letters, spaces, numbers and other characters of an input string. 
+    //	count(Phrase);
+    	
+    	/*42. writting your password with hidden character
+    	Console cons;
+    	if((cons = System.console()) != null) {
+    		char[] pass_word= null;
+    		try {
+    			pass_word = cons.readPassword("Input your password :");
+    			System.out.println("your password was : " + new String(pass_word));
+    		}finally {
+    			if(pass_word != null) {
+    				java.util.Arrays.fill(pass_word, ' ');
+    			}
+    		}
+    	}else {
+    		throw new RuntimeException("Cant get password..NO Console");
+    	}*/
+		
+		/* 48. program that print the odd numbers from 1 to 99
+		for(int i =0; i<100; i++) {
+			if(i %2 !=0) {
+				System.out.println(i);
+			}
+		}*/
+		
+		/* 49. program accept number and check the number is even if even write 1 if odd write 0
+		int num = scan.nextInt();
+		checkNum(num);*/
+		
+		/* 58. program to captalize the first letter on a sentence 
+		String phrase = scan.nextLine();
+		String upper_Case = "";
+		@SuppressWarnings("resource")
+		Scanner linescan = new Scanner(phrase);
+		while(linescan.hasNext()) {
+			String word = linescan.next();
+			upper_Case += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ";
+		}
+		System.out.println(upper_Case.trim());*/
+		
+		/* 59. program to lower case all the senetence 
+		phrase = phrase.toLowerCase();
+		System.out.println(phrase);*/
+		
+		// 84. program to take three characters from string and add tht three characters to the begining and to the end
+		// example :python --> honpythonhon
+		String word = scan.nextLine();
+		String lastThree = word.substring(3, 6);
+		System.out.println(lastThree + word +lastThree );
+		
     }
     // 11. method to calculate perimeter and area of a given circle
     // perimeter method
@@ -137,4 +199,44 @@ public class Basic01 {
     	}
     	System.out.println("The Result is : " + sum);
     }
+    
+	// 38.count the letters, spaces, numbers and other characters of an input string. 
+	public static void count(String phrase) {
+    	
+    	char[] chr = phrase.toCharArray();
+    	int letter =0;
+    	int spaces =0;
+    	int numbers = 0;
+    	int other =0;
+    	// looping thought the character array 
+    	for(int i=0; i<chr.length;i++) {
+    		if(Character.isLetter(chr[i])) {
+    			letter++;
+    		}
+    		else if(Character.isSpaceChar(chr[i])) {
+    			spaces++;
+    		}
+    		else if(Character.isDigit(chr[i])) {
+    			numbers++;
+    		}
+    		else {
+    			other++;
+    		}
+    	}
+    	System.out.println("Number of letters on the sentence is :" + letter);
+		System.out.println("Number of spaces on the sentence is :" + spaces);
+		System.out.println("Number of numbers on the sentence is :" + numbers);
+		System.out.println("Number of other characters on the sentence is :" + other);
+    	System.out.println("");
+    }
+	
+	// 49. program accept number and check the number is even if even write 1 if odd write 0
+	public static void checkNum(int num) {
+		if(num%2 ==0) {
+			System.out.println(1);
+		}else if (num%2 != 0) {
+			System.out.println(0);
+		}
+	}
+
 }
