@@ -15,7 +15,8 @@ public class BiToDecimal {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-		
+		// to calculate the time of the algohrithm 
+		long startTime = System.nanoTime();
 		int sum =0;
 		// 1. take input from the user
 		Scanner scan = new Scanner(System.in);
@@ -40,7 +41,8 @@ public class BiToDecimal {
    		 	sum +=result;
 		}
 		System.out.println(sum);
+		long estimatedTime = System.nanoTime() - startTime;
+		System.out.println("Estimated Time = " + estimatedTime);
     }
 	
 }
-
