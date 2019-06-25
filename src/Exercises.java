@@ -73,11 +73,16 @@ public class Exercises{
 		input : [20,30,40,50,67]
 		output : the largest number = 67
 		--------------------------------------------------------------------------------------
-		15. 
-
-
-
-
+		15. write a program to display an array with specific length and display the array 
+		--------------------------------------------------------------------------------------
+		16. write a program to compare between 2 different arrays elements with the same length
+		input : [2,4,6,8,10]
+				[1,3,7,5,11]
+		output : 2 > 1 - 4 > 3 - 6 < 7 - 8 > 5 - 10 < 11 		
+		--------------------------------------------------------------------------------------
+		17. write a program to create new array from agiven array the first element in the new array is 10
+		--------------------------------------------------------------------------------------
+		18. 
 
 
 
